@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,8 +26,7 @@
 		BBD8979425688AA3001404F3 /* LineChrtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD8979325688AA3001404F3 /* LineChrtView.swift */; };
 		BBD8979825688B06001404F3 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD8979725688B06001404F3 /* LineChart.swift */; };
 		BBF4266225662EBC00BCC31D /* GroupedBCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4266125662EBC00BCC31D /* GroupedBCView.swift */; };
-		BBF4E9C2256364D6001BB1DB /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF4E9BD256364C6001BB1DB /* Charts.framework */; };
-		BBF4E9C3256364D6001BB1DB /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BBF4E9BD256364C6001BB1DB /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CDD4D179800F948391A30E50 /* Pods_Charts_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73308FEA6DE605FD7723745 /* Pods_Charts_SwiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,21 +46,10 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		BBC3C5D12562077B00E3FFFD /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				BBF4E9C3256364D6001BB1DB /* Charts.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		103677441F907FEC30C942EA /* Pods-Charts-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charts-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Charts-SwiftUI/Pods-Charts-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		20EDD913B243874320452B40 /* Pods-Charts-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charts-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Charts-SwiftUI/Pods-Charts-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		B73308FEA6DE605FD7723745 /* Pods_Charts_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Charts_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB13C88F257470C700650A1D /* CombinedChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedChartView.swift; sourceTree = "<group>"; };
 		BB2757812576120E003022E2 /* CombinedMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedMarker.swift; sourceTree = "<group>"; };
 		BB776A9E2568C346006BDCEF /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
@@ -91,13 +79,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF4E9C2256364D6001BB1DB /* Charts.framework in Frameworks */,
+				CDD4D179800F948391A30E50 /* Pods_Charts_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C07AC44ED0F404267AB73ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				103677441F907FEC30C942EA /* Pods-Charts-SwiftUI.debug.xcconfig */,
+				20EDD913B243874320452B40 /* Pods-Charts-SwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BB1E53D825684811005D906A /* Chart UIViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +146,7 @@
 				BBC3C5B12562029300E3FFFD /* Charts-SwiftUI */,
 				BBC3C5B02562029300E3FFFD /* Products */,
 				BBC3C5CE2562077B00E3FFFD /* Frameworks */,
+				3C07AC44ED0F404267AB73ED /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,6 +184,7 @@
 		BBC3C5CE2562077B00E3FFFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B73308FEA6DE605FD7723745 /* Pods_Charts_SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,10 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBC3C5BE2562029400E3FFFD /* Build configuration list for PBXNativeTarget "Charts-SwiftUI" */;
 			buildPhases = (
+				496AEDD55B15AFD805ABBF13 /* [CP] Check Pods Manifest.lock */,
 				BBC3C5AB2562029300E3FFFD /* Sources */,
 				BBC3C5AC2562029300E3FFFD /* Frameworks */,
 				BBC3C5AD2562029300E3FFFD /* Resources */,
-				BBC3C5D12562077B00E3FFFD /* Embed Frameworks */,
+				06D3E48BCD999E54406EF358 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +286,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06D3E48BCD999E54406EF358 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Charts-SwiftUI/Pods-Charts-SwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Charts-SwiftUI/Pods-Charts-SwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Charts-SwiftUI/Pods-Charts-SwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		496AEDD55B15AFD805ABBF13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Charts-SwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BBC3C5AB2562029300E3FFFD /* Sources */ = {
@@ -433,12 +475,13 @@
 		};
 		BBC3C5BF2562029400E3FFFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 103677441F907FEC30C942EA /* Pods-Charts-SwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Charts-SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = RKV4UP49S6;
+				DEVELOPMENT_TEAM = PW432HVG5M;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Charts-SwiftUI/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -446,7 +489,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.createchsol.Charts-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cabawa.Charts-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,12 +498,13 @@
 		};
 		BBC3C5C02562029400E3FFFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20EDD913B243874320452B40 /* Pods-Charts-SwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Charts-SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = RKV4UP49S6;
+				DEVELOPMENT_TEAM = PW432HVG5M;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Charts-SwiftUI/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -468,7 +512,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.createchsol.Charts-SwiftUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cabawa.Charts-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -25,7 +25,7 @@ struct PieChart: UIViewRepresentable {
         setChartData(uiView)
         configureChart(uiView)
         formatCenter(uiView)
-        formatDescription(description: uiView.chartDescription)
+        formatDescription(description: uiView.chartDescription!)
         formatLegend(legend: uiView.legend)
         uiView.notifyDataSetChanged()
     }
