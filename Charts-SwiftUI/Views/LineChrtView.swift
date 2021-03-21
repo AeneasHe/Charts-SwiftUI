@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 
+// 堆积图
 struct LineChrtView: View {
     @State private var year = 2019
     var body: some View {

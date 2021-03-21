@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 
+// 饼图
 struct PCView: View {
     @State private var category: Wine.Category = .variety
     var body: some View {

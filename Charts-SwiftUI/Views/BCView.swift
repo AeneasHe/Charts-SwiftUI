@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 
+/// 条形图📊
 struct BCView: View {
 
     @State private var selectedItem:Transaction = Transaction.initialItem(year: 2019)

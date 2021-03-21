@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 
+// 组合条形图📊
 struct GroupedBCView: View {
     @State private var selectedItem:Transaction = Transaction.initialItem(year: 2019)
     var body: some View {
