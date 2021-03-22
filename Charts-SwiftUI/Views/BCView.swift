@@ -21,11 +21,14 @@ struct BCView: View {
                 Text("2020").tag(2020)
             })
             .pickerStyle(SegmentedPickerStyle())
-            BarChart(selectedItem: $selectedItem,
-                     entries: Transaction.transactionsForYear(selectedItem.year,
-                                                              transactions: Transaction.allTransactions))
-                
-                .frame(height: 300)
+
+            BarChart(
+                selectedItem: $selectedItem,
+                entries: Transaction.transactionsForYear(
+                        selectedItem.year,
+                        transactions: Transaction.allTransactions)
+            ).frame(height: 300)
+            
             if selectedItem.month != -1 {
                 Text("\(Int(selectedItem.quantity)) for \(Transaction.monthArray[Int(selectedItem.month)])")
             } else {

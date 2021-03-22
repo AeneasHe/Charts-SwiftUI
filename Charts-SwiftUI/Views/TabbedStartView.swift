@@ -15,13 +15,13 @@ struct TabbedStartView: View {
             BCView()
                 .tabItem {
                     Image("BarChart")
-                    Text("Bar Chart")
+                    Text("条形图")
                 }
             // 组合条形图：两张图在y方向组合
             GroupedBCView()
                 .tabItem {
                     Image("Grouped")
-                    Text("Grouped Bar Chart")
+                    Text("组合图")
                 }
             // 饼图
 //            PCView()
@@ -33,14 +33,14 @@ struct TabbedStartView: View {
             LineChrtView()
                 .tabItem {
                     Image("StackedLine")
-                    Text("Stacked Line Chart")
+                    Text("堆积图")
                 }
 
             // 复合图：两张图在z方向堆叠
             CombinedChrtView()
                 .tabItem {
                     Image("StackedBarLine")
-                    Text("Bar + Line Chart")
+                    Text("复合图")
                 }
             
             // K线图

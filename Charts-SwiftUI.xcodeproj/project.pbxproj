@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9208D0DE2607C51E00D08662 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9208D0DD2607C51E00D08662 /* Color.swift */; };
 		923566C22607B3840056EB4B /* KLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923566C12607B3840056EB4B /* KLineChart.swift */; };
 		923566C52607B3ED0056EB4B /* KLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923566C42607B3ED0056EB4B /* KLineChartView.swift */; };
 		BB13C890257470C700650A1D /* CombinedChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13C88F257470C700650A1D /* CombinedChartView.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		103677441F907FEC30C942EA /* Pods-Charts-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charts-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Charts-SwiftUI/Pods-Charts-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		20EDD913B243874320452B40 /* Pods-Charts-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charts-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Charts-SwiftUI/Pods-Charts-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		9208D0DD2607C51E00D08662 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		923566C12607B3840056EB4B /* KLineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLineChart.swift; sourceTree = "<group>"; };
 		923566C42607B3ED0056EB4B /* KLineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLineChartView.swift; sourceTree = "<group>"; };
 		B73308FEA6DE605FD7723745 /* Pods_Charts_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Charts_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 				BBC3C5B62562029400E3FFFD /* Assets.xcassets */,
 				BBC3C5BB2562029400E3FFFD /* Info.plist */,
 				BBC3C5B82562029400E3FFFD /* Preview Content */,
+				9208D0DD2607C51E00D08662 /* Color.swift */,
 			);
 			path = "Charts-SwiftUI";
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				BBC3C5D3256207F200E3FFFD /* BarChart.swift in Sources */,
 				BBC3C5B32562029300E3FFFD /* Charts_SwiftUIApp.swift in Sources */,
 				BB2757842576120E003022E2 /* CombinedMarker.swift in Sources */,
+				9208D0DE2607C51E00D08662 /* Color.swift in Sources */,
 				BBD53E4E2566163600C68F55 /* Transactions.swift in Sources */,
 				923566C52607B3ED0056EB4B /* KLineChartView.swift in Sources */,
 				BBD8979825688B06001404F3 /* LineChart.swift in Sources */,

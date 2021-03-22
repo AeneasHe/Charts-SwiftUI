@@ -18,10 +18,13 @@ struct Transaction {
     var itemType: ItemType
 
     static var selectedItem = Transaction(year: 2020, month: -1, quantity: -1, itemType: .none)
+    
     static func initialItem(year: Int) -> Transaction {
         Transaction(year: year, month: -1, quantity: -1, itemType: .none)
     }
+    
     static var monthArray = ["Jan","Feb","Mar","Apr","May","Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    
     static func transactionsForYear(_ year: Int, transactions: [Transaction], itemType:ItemType = .itemIn) -> [BarChartDataEntry] {
         let yearData = transactions.filter{$0.year == year && $0.itemType == itemType}
         return yearData.map{BarChartDataEntry(x: $0.month, y: $0.quantity * (itemType == ItemType.itemOut ? -1 : 1))}

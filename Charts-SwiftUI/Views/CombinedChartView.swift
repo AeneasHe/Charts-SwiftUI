@@ -29,8 +29,11 @@ struct CombinedChrtView: View {
             }.pickerStyle(SegmentedPickerStyle())
             
             // 复合图
-            CombinedChart(barEntries: Sale.UnitsFor(Sale.allSales, quarter: quarter), lineEntries: Sale.TransactionsFor(Sale.allSales, quarter: quarter), quarter: $quarter)
-                .frame(height: 400)
+            CombinedChart(
+                barEntries: Sale.UnitsFor(Sale.allSales, quarter: quarter), 
+                lineEntries: Sale.TransactionsFor(Sale.allSales, quarter: quarter), 
+                quarter: $quarter
+            ).frame(height: 400)
             
         }.padding(.horizontal)
     }

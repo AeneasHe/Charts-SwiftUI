@@ -9,15 +9,21 @@ import Charts
 import SwiftUI
 
 struct GroupedBarChart: UIViewRepresentable {
+
+    // 双向绑定：选中的数据
     @Binding var selectedItem: Transaction
+
     var entriesIn: [BarChartDataEntry]
     var entriesOut: [BarChartDataEntry]
+    
     let groupedBarChart = BarChartView()
     let barWidth = 0.35
     let barSpace = 0.05
     let groupSpace = 0.2
     let startX:Double = 0
+
     func makeUIView(context: Context) -> BarChartView {
+        // 
         groupedBarChart.delegate = context.coordinator
         return groupedBarChart
     }
@@ -45,7 +51,9 @@ struct GroupedBarChart: UIViewRepresentable {
     
     func formatDataSet(dataSet: BarChartDataSet, label: String, color: UIColor) {
         dataSet.label = label
+        // 设置高亮时的颜色透明度
         dataSet.highlightAlpha = 0.2
+        
         dataSet.colors = [color]
         let format = NumberFormatter()
         dataSet.valueColors = [color]
@@ -98,22 +106,31 @@ struct GroupedBarChart: UIViewRepresentable {
         legend.yOffset = 0.0
     }
 
+    // 协调器，这里主要用于选中数据时，将数据对应的线条颜色加深
     class Coordinator: NSObject, ChartViewDelegate {
+
         let parent: GroupedBarChart
+        
         init(parent: GroupedBarChart) {
             self.parent = parent
         }
+
+        // 这里的chartValueSelected是 ChartViewDelegate协议要实现的方法
         func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+            // 更新选中的数据
             parent.selectedItem.month = entry.x
             parent.selectedItem.quantity = entry.y
+            // 数据类型
             if entry.y < 0 {
                 parent.selectedItem.itemType = .itemOut
             } else {
                 parent.selectedItem.itemType = .itemIn
             }
+
         }
     }
 
+    // 生成协调器
     func makeCoordinator() -> Coordinator {
         Coordinator(parent: self)
     }

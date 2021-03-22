@@ -10,7 +10,9 @@ import SwiftUI
 
 struct BarChart : UIViewRepresentable {
     @Binding var selectedItem: Transaction
+    
     var entries : [BarChartDataEntry]
+
     let barChart = BarChartView()
     func makeUIView(context: Context) -> BarChartView {
         barChart.delegate = context.coordinator
@@ -84,6 +86,7 @@ struct BarChart : UIViewRepresentable {
             self.parent = parent
         }
         func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+            print("选中了",entry.x)
             parent.selectedItem.month = entry.x
             parent.selectedItem.quantity = entry.y
         }
@@ -97,8 +100,8 @@ struct BarChart : UIViewRepresentable {
 
 struct BarChart_Previews: PreviewProvider {
     static var previews: some View {
-        BarChart(selectedItem: .constant(Transaction.selectedItem),
-                 entries: Transaction.transactionsForYear(2019,
-                                                          transactions: Transaction.allTransactions))
+        BarChart(
+            selectedItem: .constant(Transaction.selectedItem),
+            entries: Transaction.transactionsForYear(2019,transactions: Transaction.allTransactions))
     }
 }
